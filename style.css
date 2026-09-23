@@ -1,0 +1,781 @@
+@font-face {
+    font-family: "Vogue";
+    src: url("Vogue-Regular.otf") format("opentype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    height: 80px;
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background-color: #ffffff;
+}
+
+.logo {
+    color: #d71920;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #111111;
+    text-decoration: none;
+
+    font-weight: bold;
+
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d71920;
+}
+
+.prenota {
+    background-color: #d71920;
+    color: #ffffff;
+
+    padding: 12px 22px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.prenota:hover {
+    background-color: #111111;
+}
+
+
+/* =========================
+   HOMEPAGE
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+.logo-home {
+    width: 220px;
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    animation: dissolvenza 1.5s ease forwards;
+}
+
+/* Scritta piccola */
+
+.sottotitolo {
+    color: #d71920;
+
+    letter-spacing: 5px;
+
+    font-size: 20px;
+
+    font-family: "Arial", sans-serif;
+
+    margin-bottom: 25px;
+
+    opacity: 0;
+
+    animation: dissolvenza 1.5s ease forwards;
+}
+
+
+/* Titolo principale */
+
+.hero h1 {
+    font-size: 80px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 40px;
+
+    opacity: 0;
+
+    animation: dissolvenza 1.8s ease forwards;
+
+    animation-delay: 0.3s;
+}
+
+
+/* Pulsante */
+
+.bottone {
+    background-color: #d71920;
+    color: #ffffff;
+
+    padding: 16px 35px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    opacity: 0;
+
+    animation: dissolvenza 1.5s ease forwards;
+
+    animation-delay: 0.8s;
+}
+
+.bottone:hover {
+    background-color: #111111;
+}
+
+
+/* =========================
+   ANIMAZIONE DISSOLVENZA
+========================= */
+
+@keyframes dissolvenza {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}/* =========================
+   SERVIZI
+========================= */
+
+.servizi {
+    background-color: #f7f7f7;
+
+    padding: 110px 60px;
+}
+
+
+/* Titolo */
+
+.titolo-sezione {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.titolo-sezione p {
+    color: #d71920;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.titolo-sezione h2 {
+    font-size: 42px;
+
+    letter-spacing: 1px;
+
+    color: #111111;
+}
+
+
+/* Contenitore servizi */
+
+.servizi-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.servizio:nth-child(4) {
+    grid-column: 2;
+}
+
+
+/* Singolo servizio */
+
+.servizio {
+    background-color: #ffffff;
+
+    padding: 40px 35px;
+
+    min-height: 300px;
+
+    position: relative;
+
+    border-top: 4px solid #d71920;
+
+    transition: 0.3s;
+}
+
+
+/* Effetto quando passi sopra */
+
+.servizio:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Numero */
+
+.numero {
+    color: #d71920;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Nome servizio */
+
+.servizio h3 {
+    font-size: 26px;
+
+    margin-top: 30px;
+
+    margin-bottom: 18px;
+
+    color: #000000;
+
+    font-family: "Vogue", sans-serif;
+}
+
+
+/* Descrizione */
+
+.servizio p {
+    color: #777777;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* Prezzo */
+
+.prezzo {
+    position: absolute;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    color: #d71920;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}/* =========================
+   CHI SIAMO
+========================= */
+
+.chi-siamo {
+    background-color: #ffffff;
+
+    padding: 120px 60px;
+}
+
+
+.chi-siamo-contenuto {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* TESTO */
+
+.chi-siamo-testo {
+    max-width: 520px;
+}
+
+
+.etichetta {
+    color: #d71920;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    font-family: "Vogue", sans-serif;
+}
+
+
+.chi-siamo-testo h2 {
+    color: #111111;
+
+    font-size: 60px;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+
+.testo {
+    color: #666666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+/* PULSANTE */
+
+.bottone-secondario {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 14px 25px;
+
+    border: 2px solid #d71920;
+
+    color: #d71920;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.bottone-secondario:hover {
+    background-color: #d71920;
+
+    color: #ffffff;
+}
+
+
+/* RIQUADRO */
+
+.chi-siamo-box {
+    min-height: 400px;
+
+    background-color: #f7f7f7;
+
+    border: 1px solid #eeeeee;
+
+    border-top: 5px solid #d71920;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.simbolo {
+    width: 130px;
+
+    height: 130px;
+
+    border: 3px solid #d71920;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #d71920;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+
+.chi-siamo-box p {
+    color: #111111;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.chi-siamo-box span {
+    color: #d71920;
+
+    font-size: 16px;
+
+    letter-spacing: 3px;
+
+    font-family: "Arial", sans-serif;
+}
+ /* TAGLI */
+
+.tagli {
+    background-color: #ffffff;
+    padding: 110px 60px;
+}
+
+.tagli-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.taglio {
+    overflow: hidden;
+    height: 380px;
+}
+
+.taglio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.taglio {
+    position: relative;
+}
+
+.taglio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: 0.4s;
+}
+
+.taglio-overlay span {
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    transform: translateY(15px);
+
+    transition: 0.4s;
+}
+
+.taglio:hover .taglio-overlay {
+    opacity: 1;
+}
+
+.taglio:hover .taglio-overlay span {
+    transform: translateY(0);
+}
+/* CONTATTI */
+
+.contatti {
+    background-color: #111111;
+    padding: 110px 60px;
+}
+
+.contatti .titolo-sezione p {
+    color: #d71920;
+    font-family: "Vogue", sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+
+.contatti .titolo-sezione h2 {
+    color: #ffffff;
+}
+
+.contatti-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contatto {
+    padding: 45px 30px;
+
+    background-color: #ffffff;
+
+    text-align: center;
+
+    border-top: 4px solid #d71920;
+
+    transition: 0.3s;
+}
+
+.contatto:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.contatto span {
+    display: block;
+
+    color: #d71920;
+
+    font-family: "Vogue", sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.contatto h3 {
+    color: #111111;
+
+    font-family: "Vogue", sans-serif;
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.5;
+}
+/* VERSIONE MOBILE */
+
+@media (max-width: 768px) {
+
+    /* MENU */
+
+    .menu {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .prenota {
+        padding: 10px 20px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        min-height: calc(100vh - 180px);
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .sottotitolo {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+
+    /* SEZIONI */
+
+    .tagli,
+    .servizi,
+    .chi-siamo,
+    .contatti {
+        padding: 80px 20px;
+    }
+
+
+    /* TITOLI */
+
+    .titolo-sezione {
+        margin-bottom: 45px;
+    }
+
+    .titolo-sezione h2 {
+        font-size: 32px;
+    }
+
+
+    /* TAGLI */
+
+    .tagli-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .taglio {
+        height: 420px;
+    }
+
+
+    /* SERVIZI */
+
+    .servizi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .servizio:nth-child(4) {
+        grid-column: auto;
+    }
+
+
+    /* CHI SIAMO */
+
+    .chi-siamo-contenuto {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .chi-siamo-testo h2 {
+        font-size: 48px;
+    }
+
+    .chi-siamo-box {
+        min-height: 350px;
+    }
+
+
+    /* CONTATTI */
+
+    .contatti-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+/* WHATSAPP */
+
+.bottone-whatsapp {
+    display: block;
+
+    width: fit-content;
+
+    margin: 5px auto 0;
+
+    padding: 5px 30px;
+
+    background-color: #d71920;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Vogue", sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    border: 2px solid #d71920;
+
+    transition: 0.3s;
+}
+
+.bottone-whatsapp:hover {
+    background-color: #ffffff;
+    color: #d71920;
+}
+.contatti {
+    margin-top: 60px;
+}
